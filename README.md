@@ -2,7 +2,7 @@
 
 ## To Run This Create firebase file in src/firebase folder and add firebase configuration
 
-```
+```javascript
 import * as firebase from 'firebase';
 
 const config = {
