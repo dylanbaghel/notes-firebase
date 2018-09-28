@@ -14,7 +14,9 @@ import PublicRoute from './PublicRoute';
 import LandingPage from './../components/LandingPage';
 import ForgotPassword from './../components/ForgotPassword';
 
-export const history = createHistory();
+export const history = createHistory({
+    basename: process.env.PUBLIC_URL
+});
 
 const AppRouter = () => {
     return (
