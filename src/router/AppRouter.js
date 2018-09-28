@@ -12,6 +12,7 @@ import SignUp from './../components/SignUp'
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 import LandingPage from './../components/LandingPage';
+import ForgotPassword from './../components/ForgotPassword';
 
 export const history = createHistory();
 
@@ -50,6 +51,10 @@ const AppRouter = () => {
                     <PrivateRoute
                         exact path="/notes/edit/:id"
                         component={EditNote}
+                    />
+                    <PublicRoute 
+                        exact path="/forgotPassword"
+                        component={ForgotPassword}
                     />
                     <Route
                         component={NotFound}

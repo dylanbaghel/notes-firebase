@@ -2,6 +2,7 @@ import React from 'react';
 import { isEmail } from 'validator';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { startSignUp } from './../actions/authActions';
 
@@ -104,6 +105,9 @@ class SingUp extends React.Component {
                             <div className="is-invalid">
                                 <small className="text-danger">{this.state.errors.password}</small>
                             </div>
+                        </div>
+                        <div className="mb-1">
+                            <small><Link to="/login" className="text-primary">Already Have An Account</Link></small>
                         </div>
                         <button
                             className="btn btn-danger"

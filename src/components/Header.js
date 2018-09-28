@@ -61,7 +61,9 @@ const Header = (props) => {
     return (
         <nav className="navbar navbar-expand navbar-dark bg-danger mb-5">
             <div className="container">
-                <h4 className="navbar-brand">Notes</h4>
+                <h4 className="navbar-brand">
+                    <Link to="/" className="brand">Notes</Link>
+                </h4>
                 {props.isAuthenticated ? authLinks : publicLinks}
             </div>
         </nav>

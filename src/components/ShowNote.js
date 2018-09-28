@@ -36,7 +36,7 @@ const ShowNote = (props) => {
                 </div>
             ) : (
                     <div>
-                        <h4>Not Found</h4>
+                        <h4>Note Not Found</h4>
                     </div>
                 )}
         </div>

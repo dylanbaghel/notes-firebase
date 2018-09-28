@@ -11,6 +11,7 @@ import { firebase } from './firebase/firebase';
 import { startSetNotes } from './actions/noteActions';
 import { login, logOut } from './actions/authActions';
 import { history } from './router/AppRouter';
+import { setVerifyEmail } from './actions/authActions';
 
 const store = configureStore();
 
@@ -40,7 +41,6 @@ firebase.auth().onAuthStateChanged((user) => {
         if (history.location.pathname === '/') {
             history.push('/notes');
         }
-
     } else {
         store.dispatch(logOut());
         renderApp();

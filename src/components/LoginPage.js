@@ -2,6 +2,7 @@ import React from 'react';
 import { isEmail } from 'validator';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { startLogin } from './../actions/authActions';
 
@@ -62,7 +63,7 @@ class LoginPage extends React.Component {
 
             }).catch((e) => {
                 this.setState(() => ({
-                    errors: {password: e.message}
+                    errors: { password: e.message }
                 }));
             });
 
@@ -101,6 +102,16 @@ class LoginPage extends React.Component {
                                 <small className="text-danger">{this.state.errors.password}</small>
                             </div>
                         </div>
+                        <div>
+                            <small>
+                                Need An Account? <Link to="/signup" className="text-info">Click Here</Link>
+                            </small>
+                        </div>
+                        <div className="mb-1">
+                            <small>
+                                <Link to="/forgotPassword" className="text-primary">Forgot Password</Link>
+                            </small>
+                        </div>
                         <button
                             className="btn btn-danger"
                         >Log In</button>
@@ -116,5 +127,6 @@ const mapDispatchToProps = (dispatch) => {
         startLogin: (email, password) => dispatch(startLogin(email, password))
     };
 };
+
 
 export default connect(undefined, mapDispatchToProps)(LoginPage);

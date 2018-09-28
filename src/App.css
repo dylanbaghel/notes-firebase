@@ -23,3 +23,11 @@ a:hover {
     color: red;
     text-decoration: none;
 }
+
+.brand {
+    color: white
+}
+
+.brand:hover {
+    color: #eee;
+}

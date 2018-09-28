@@ -1,5 +1,5 @@
 import { firebase } from './../firebase/firebase';
-import { LOGIN, LOGOUT } from './types';
+import { LOGIN, LOGOUT} from './types';
 
 export const login = (uid) => {
     return {
@@ -24,4 +24,8 @@ export const logOut = () => {
 
 export const startLogOut = () => dispatch => {
     return firebase.auth().signOut();
+};
+
+export const forgotPassword = (email) => dispatch => {
+    return firebase.auth().sendPasswordResetEmail(email);
 };

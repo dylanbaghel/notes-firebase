@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT } from './../actions/types';
+import { LOGIN, LOGOUT} from './../actions/types';
 
 const authReducerDefaultState = {};
 
@@ -10,7 +10,10 @@ const authReducer = (state = authReducerDefaultState, action) => {
                 uid: action.uid
             };
         case LOGOUT:
-            return {};
+            return {
+                ...state,
+                uid: undefined
+            };
         default:
             return state;
     }
