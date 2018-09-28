@@ -1,0 +1,11 @@
+export const ADD_NOTE = 'ADD_NOTE';
+export const EDIT_NOTE = 'EDIT_NOTE';
+export const REMOVE_NOTE = 'REMOVE_NOTE';
+export const SET_NOTES = 'SET_NOTES';
+export const LOADING_TRUE = 'LOADING_TRUE';
+export const LOADING_FALSE = 'LOADING_FALSE';
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
+export const SET_TEXT_FILTER = 'SET_TEXT_FILTER';
+export const SORT_BY_DATE = 'SORT_BY_DATE';
+export const SORT_BY_ALPHA = 'SORT_BY_ALPHA';
